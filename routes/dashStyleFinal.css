@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Nobile;
+	src: url('nobile-webfont.woff') format('woff'),
+		 url('nobile-webfont.tff') format('truetype');
+}
+
+@font-face {
+    font-family: Do Hyeon;
+    src: url(DoHyeon-Regular.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    /* height: 100%; */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(background-blur.jpg); */
+    background-color: #746f76;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    line-height: 30px;
+    min-height: 100vh;
+    margin: 0;
+    /* display: flex; */
+}
+
+hr{
+    width: 100%;
+}
+
+fieldset{
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    background-color: #5a5353c2;
+    box-shadow: 0px 2px 55px #000000;
+    border: none;
+    border-radius: 6px;
+    line-height: 40px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset[id="user"]{
+    width: 30vw;
+    height: auto;
+    padding: 25px 30px 20px;
+    margin-left: auto;
+    margin-right: 60px;
+    font-size: 18px;
+    font-weight: normal;
+    float: left;
+}
+
+fieldset[id="groups"]{
+    height: auto; 
+    width: 40vw ;
+    padding: 25px 30px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: lighter;
+    float: right;
+}
+
+label[for="text"]{
+    color: #f5d5ba;
+    font-family: Do Hyeon;
+    font-size: 40px;
+    font-weight: 700;
+    word-spacing: 10px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label[for="Name"],
+label[for="mob"],
+label[for="add"],
+label[for="stat"],
+label[for="numVotes"],
+label[for="gName"]{
+    font-size: 15px;
+    font-weight: normal;
+
+}
+
+/*------------------------------------------------------------*/
+
+.content{
+    background-color: #0000009d;
+    /* height: 100%; */
+    width: 100%;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.container{
+    width: auto;
+    height: auto;
+    font-family: Nobile;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    font-size: 20px;
+    font-weight: normal;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header{
+    text-align: center;
+    padding: 10px;
+    display: block;
+}
+
+.pfp{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pfp > img{
+    height: 100px;
+    width: 100px;
+    border: solid 2px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.groupPfp{
+    float: right; 
+    margin-top: auto;  
+    margin-bottom: auto;
+}
+
+.groupPfp > img{
+    height: 100px;
+    width: 100px;
+    border: solid 2px;
+    border-radius: 3px;
+    outline: none;   
+}
+
+.userInfo{
+    width:50%
+}
+
+.groupInfo{
+    width:50%
+}
+
+.main{
+    /* height: 100%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(background-blur.jpg);
+}
+
+/*------------------------------------------------------------*/
+#backButton{
+    float: left;
+}
+
+#logOut{
+    float: right;
+}
+
+#backButton,
+#logOut{
+    height: 35px;
+    width: 80px;
+    border: solid 1px black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding: 1px 3px 3px;
+}
+
+#backButton:hover,
+#logOut:hover,
+#button:hover{
+    box-shadow: 0px 2px 5px #000000;
+    outline: none;
+    border: none;
+}
+
+#backButton:active,
+#logOut:active{
+    vertical-align: bottom;
+    padding-top: 2px;
+}
+
+#votebtn{
+    height: 30px;
+    width: 50px;
+    border: solid 1px black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    padding: 1px 3px 3px;
+}
+
+#votebtn:active{
+    vertical-align: bottom;
+    padding-top: 2px;
+    height: 29px;
+    width: 48px;
+}
+
+#voted{ 
+    height: 30px;
+    width: 50px;
+    border: solid 1px black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #505050;
+    color: white;
+    font-size: 13px;
+    padding: 1px 3px 3px;
+}

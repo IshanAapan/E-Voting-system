@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System - Registration</title>
+    <link rel="stylesheet" href="regisStyle.css" />
+</head>
+
+<body>
+    <div class="regContainer">
+        <div class="regForm">
+            <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+                <div class="reg">
+                    Registration for Online Voting
+                </div>
+                <div class="fullname">
+                    <input type="text" name="fname" placeholder="Enter First Name" required>
+                    <input type="text" name="lname" placeholder="Enter Last Name" required>
+                </div>
+                <div class="contact">
+                    <input type="tel" name="mobile" placeholder="Enter Mobile Number" required>
+                    <input type="email" name="email" placeholder="Enter E-Mail Id" required>
+                </div>
+                <div class="regPassWord">
+                    <input type="password" name="password" placeholder="Enter Strong Password" required>
+                    <input type="password" name="cpassword" placeholder="Confirm Password" required>
+                </div>
+
+                <div class="regDob">
+                    <label for="birthDate">Date of Birth:</label>
+                    <input type="date" name="dob" id="birthDate">
+                </div>
+
+                <div class="gender">
+                    <label for="gender">Gender:</label>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="gen" value="Male" required>
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="gen" value="Female" required>
+                    <label for="other">Other</label>
+                    <input type="radio" name="gender" id="gen" value="Other" required>
+                </div>
+
+                <div class="location">
+
+
+                    <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                        <option value="">-- State --</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chattisgarh">Chattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                    </select>
+
+
+
+
+                    <select name="slct2" id="slct2">
+                        <option value="">-- City --</option>
+                    </select>
+                </div>
+
+                <script>
+                    function populate(s1, s2) {
+                        var s1 = document.getElementById(s1);
+                        var s2 = document.getElementById(s2);
+
+                        s2.innerHTML = "";
+
+                        if (s1.value == "Andhra Pradesh") {
+                            var optionArray = ['adoni|Adoni', 'anantapuram|Anantapuram', 'bhimavaram|Bhimavaram', 'chilakaluripeta|chilakaluripeta', 'dharmavaram|Dharmavaram', 'eluru|Eluru', 'gudivada|Gudivada', 'guntakal|Guntakal', 'hindupur|Hindupur'];
+                        }
+                        else if (s1.value == "Bihar") {
+                            var optionArray = ['aurangabad|Aurangabad', 'bagha|Bagha', 'chapra | Chapra', 'dehri | Dehri', 'gaya|Gaya', 'hajipur|Hajipur', 'jamalpur|Jamalpur', 'katihar|Katihar', 'muzaffarpur|Muzaffarpur', 'patna|Patna'];
+                        }
+                        else if (s1.value == "Chattisgarh") {
+                            var optionArray = ['bilaspur|Bilaspur', 'raipur|Raipur', 'durg | Durg', 'dantewada | Dantewada', 'jashpur|Jashpur', 'korba|Korba', 'surajpur|Surajpur', 'mungeli|Mungeli'];
+                        }
+                        else if (s1.value == "Goa") {
+                            var optionArray = ['bicholim|Bicholim', 'canacona|Canacona', 'cuncolim |Cuncolim', 'mapusa|Mapusa', 'margao|Margao', 'mormugao|Mormugao', 'panaji|Panaji', 'pernem|Pernem', 'ponda|Ponda'];
+                        }
+                        else if (s1.value == "Haryana") {
+                            var optionArray = ['ambala|Ambala', 'bahadurgarh|Bahadurgarh', 'bhiwani |Bhiwani', 'faridabad | Faridabad', 'gurugram|Gurugram', 'hisar|Hisar', 'jind|Jind', 'karnal|Karnal', 'mahendergarh|Mahendergarh', 'punchkula|Punchkula', 'rothak|Rothak', 'sirsa|Sirsa'];
+                        }
+                        else if (s1.value == "Punjab") {
+                            var optionArray = ['abohar|Abohar', 'amritsar|Amritsar', 'batala |Batala', 'bathinda | Bathinda', 'fazilka|Fazilka', 'firozpur|Firozpur', 'faridkot|Faridkot', 'hoshiarpur|Hoshiarpur', 'jalandhar|Jalandhar', 'khanna|Khanna', 'ludhiana|Ludhiana', 'mohali|Mohali'];
+                        }
+                        else if (s1.value == "Rajasthan") {
+                            var optionArray = ['ajmer|Ajmer', 'alwar|Alwar', 'baran |Baran', 'bhilwara | Bhilwara', 'bikaner|Bikaner', 'dhaulpur|Dhulpur', 'hanumangarh|Hanumangarh', 'jaipur|Jaipur', 'jodhpur|Jodhpur', 'kishangarh|Kishangarh', 'pali|Pali', 'sri ganganagar|Sri Ganganagar', 'tonk|Tonk', 'udaipur|Udaipur'];
+                        }
+                        for (var option in optionArray) {
+                            var pair = optionArray[option].split("|");
+                            var newoption = document.createElement("option");
+
+                            newoption.value = pair[0];
+                            newoption.innerHTML = pair[1];
+                            s2.options.add(newoption);
+                        }
+                    }
+                </script>
+
+                <!--<div class="location">
+            <select id="state">
+                <option value="0">State</option>
+                <option value="1">Andhra Pradesh</option>
+                <option value="2">Arunachal Pradesh</option>
+                <option value="3">Assam</option>
+                <option value="4">Bihar</option>
+                <option value="5">Chattisgarh</option>
+                <option value="6">Goa</option>
+                <option value="7">Gujarat</option>
+                <option value="8">Haryana</option>
+                <option value="9">Punjab</option>
+                <option value="10">Rajasthan</option>
+            </select>
+            <select id="City">
+                <option value="0">City</option>
+                <option value="1">Abohar</option>
+                <option value="2">Amarvati</option>
+                <option value="3">Assam</option>
+                <option value="4">Bordmusa</option>
+                <option value="5">Bubanf</option>
+                <option value="6">Bathinda</option>
+                <option value="7">Chitoor</option>
+                <option value="8">Hisar</option>
+                <option value="9">Kota</option>
+                <option value="10">Sri Ganaganagar</option>
+            </select>
+        </div>-->
+
+                <div class="regAddress">
+                    <textarea rows=3 cols=30 name="address" placeholder="Address"></textarea>
+                </div>
+                <div class="regImageUpload">
+                    Upload Image/Group Symbol: <input type="file" name="photo" id="imageUp" required>
+                </div>
+                <div class="regRole">
+                    Select your Role:
+                    <select id="role" name="role">
+                        <option value="1"> Voter</option>
+                        <option value="2"> Group</option>
+                    </select>
+                </div>
+                <div class="regButtons">
+                    <input type="submit" name="regSubmit" class="button" id="submitForm" value="Register" />
+                    <input type="reset" name="resetform" class="button" id="resetForm" value="Reset">
+                </div>
+                <div class=" regNavLogin">
+                    Already User? <a href="../index.html">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
