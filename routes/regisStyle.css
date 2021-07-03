@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Nobile;
+	src: url('nobile-webfont.woff') format('woff'),
+		 url('nobile-webfont.tff') format('truetype');
+}
+
+@font-face {
+    font-family: Do Hyeon;
+    src: url(DoHyeon-Regular.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* https://images.unsplash.com/photo-1604065626882-47c3093bec11?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 */
+
+body{
+    height: auto;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(background-blur.jpg);
+    background-color: #746f76;
+    font-family: Do Hyeon;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+   /* float: right; */
+}
+
+a{
+    color: #000000;;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-shadow: 0px 2px 5px #333232;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+label[for="gender"]{
+    margin-right: 19px;
+}
+
+label[for="male"],
+label[for="female"],
+label[for="other"]
+{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+input:focus{
+    background-color: #a3a3a3;
+}
+
+input{
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    height: 35px;
+    width: 300px;
+    outline: none;
+    display: inline-block;
+    font-size: 15px;
+    padding: 13px;
+}
+
+input[type="radio"]{
+    height: 30px;
+    width: 17px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 25px;
+    position: relative;
+    top: 9px;
+
+}
+
+input[type="radio"]:hover{
+    text-shadow: 1px 2px 6px black;
+    cursor: pointer;
+}
+
+select{
+    height: 30px;
+    width: 150px;
+    border: none ;
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+select:hover{
+    cursor: pointer;
+    background-color: #a4a1a5;
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+    height: 55px;
+    width: 350px;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    padding: 5px;
+}
+
+textarea:focus{
+    background-color: #a3a3a3;
+}
+
+/*
+fieldset{
+    text-align: center;
+    height: 50px;
+    width: 300px;
+    border: 1px solid #cfb730;
+    font-size: 15px;
+}
+*/
+
+/*-------------------------------------------------------------------*/
+
+.regContainer{
+    background-color: #00000054;
+    box-shadow: 0px 2px 55px #000000;
+    font-size: 15px;
+    font-family: Do Hyeon;
+    color: #ffffff;
+    font-weight: 100;
+    border-radius: 10px;
+    outline: none;
+    margin: 10px;
+    padding: 10px 38px 10px;
+    line-height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    width: auto;
+    display: inline-flex;
+}
+
+.regForm{
+    padding: 30px 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+.reg{
+    color: #f5d5ba;
+    line-height: 50px;
+    width: 100%;
+    font-family: Nobile;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.location{
+    text-align: center;
+}
+
+.regDob{
+    text-align: center;
+}
+
+.regAddress{
+    text-align: center;
+}
+
+.regImageUpload{
+    text-align: center;
+}
+
+.regRole{
+    text-align: center;
+}
+
+.regButtons{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.regNavLogin{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+#imageUp{
+    height: 50px;
+}
+
+#submitForm,
+#resetForm{
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    height: 40px;
+    width: 140px;
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+#submitForm:hover,
+#resetForm:hover{
+    height: 42px;
+    width: 142px;
+    box-shadow: 0px 2px 5px #000000;
+    border: none;
+}
+
+#submitForm:active,
+#resetForm:active{
+    vertical-align: top;
+    padding-top: 4px;
+}
+
+#birthDate{
+    width: 220px;
+    height: 30px;
+    margin-left: 40px;
+    border: none;
+}
+
+#birthDate:hover{
+    cursor: pointer;
+    background-color: #a4a1a5;
+}
+
+#imageUp{
+    border: 1px;
+    background-color: #ffffff;
+    padding: 10px 30px 40px;
+    width: 350px;
+    color: black;
+}
+
+#imageUp:hover{
+    background-color: #a4a1a5;
+    cursor: pointer;
+}
+
+

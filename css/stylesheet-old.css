@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(https://images.unsplash.com/photo-1604065626882-47c3093bec11?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(218, 194, 105);
+  align-items: center;
+  justify-content: center;
+  line-height: 30px;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  float: right;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.534);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.459);
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+input {
+  border: 2px solid rgb(207, 183, 48);
+  border-radius: 7px;
+  outline: none;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 350px;
+  outline: none;
+  display: block;
+  font-size: 22px;
+  padding: 13px;
+}
+
+select {
+  font-size: 17px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  margin-bottom: 35px;
+  border: 2px solid rgb(207, 183, 48);
+  outline: none;
+  border-radius: 7px;
+}
+
+select:hover {
+  cursor: pointer;
+  background-color: rgb(228, 222, 171);
+}
+
+/*---------------------------------------*/
+
+.container {
+  background-color: rgb(241, 219, 93);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(51, 25, 4);
+  border-radius: 10px;
+  outline: none;
+  margin: 10px;
+  padding: 50px 40px;
+  height: 700px;
+  width: 500px;
+  box-shadow: 0px 2px 55px black;
+  float: right;
+  margin-right: 90px;
+}
+
+.log {
+  line-height: 50px;
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.form {
+  font-size: 25px;
+  padding: 30px 40px;
+  display: block;
+}
+
+.LofIn {
+  text-align: center;
+}
+
+.register {
+  font-size: 20px;
+  text-align: center;
+}
+
+/*---------------------------------------*/
+
+#login {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 110px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  height: 50px;
+  width: 140px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: bold;
+  border: solid 1px rgb(207, 183, 48);
+  padding: 0px;
+}
+
+#login:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgb(0, 0, 0);
+  border: none;
+}
+
+#Password {
+  font-weight: bold;
+}
+
+/*------///REGISTRATION FORM STYLES\\\---------*/
