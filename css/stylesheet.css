@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Nobile;
+	src: url('nobile-webfont.woff') format('woff'),
+		 url('nobile-webfont.tff') format('truetype');
+}
+
+@font-face {
+    font-family: Do Hyeon;
+    src: url(DoHyeon-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(background-blur.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #746f76;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+}
+
+a{
+    color: #000000;;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-shadow: 0px 2px 5px #333232;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input{
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    margin-bottom: 40px;
+    height: 40px;
+    width: 350px;
+    outline: none;
+    display: block;
+    font-size: 18px;
+    padding: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+}
+
+input:focus{
+    background-color: #a3a3a3;
+}
+
+select{
+    font-size: 17px;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 35px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+
+select:hover{
+    cursor: pointer;
+    background-color: #a4a1a5;
+}
+
+/*---------------------------------------*/
+
+.container{
+    background-color: #00000054;
+    box-shadow: 0px 2px 55px #000000;
+    font-family: Do Hyeon;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    margin: 10px;
+    padding: 20px 40px 10px;
+    height: auto;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+}
+
+.log{
+    color: #f5d5ba;
+    line-height: 50px;
+    width: 100%;
+    font-family: Nobile;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.form{
+    font-size: 25px;
+    padding: 30px 40px;
+    display: block;
+}
+
+.LogIn{
+    text-align: center;
+}
+
+.register{
+    font-size: 20px;
+    text-align: center;
+}
+
+/*---------------------------------------*/
+
+#login{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    height: 50px;
+    width: 140px;
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+#login:hover{
+    height: 51px;
+    width: 141px;
+    box-shadow: 0px 2px 5px #000000;
+    border: none;
+}
+
+#login:active{
+    vertical-align: bottom;
+    padding-top: 3px;
+}
+
+#Password{
+    font-weight: bold;
+}
+
+
+
+
+
+
