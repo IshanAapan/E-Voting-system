@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System - Login</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <!--<div class="header">
+            Online Voting System
+        </div>-->
+
+    <div class="container">
+        <div class="form">
+            <form action="api/login.php" method="POST">
+                <div class="log">Login to Online Voting System</div>
+                <div class="mobile">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" name="mobile" id="mobNum" required />
+                </div>
+                <div class="password">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="Password" required />
+                </div>
+                <div class="roleSelect">
+                    <label for="roleSelection">Select Your Role</label>
+                    <div class="selection">
+                        <select id="role" name="role">
+                            <option value="1">Voter</option>
+                            <option value="2">Group</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="LogIn">
+                    <input type="submit" id="login" value="Login">
+                </div>
+                <div class="register">
+                    <label for="newUser">New User?</label>
+                    <a href="routes/register.html">Register here.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
